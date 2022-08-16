@@ -1,0 +1,106 @@
+@font-face {
+    font-family: 'Sysfont';
+    src: url('../fonts/sysfont.woff2') format('woff2'),
+    url('../fonts/sysfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    /* Monochromes */
+    --c-black: rgb(0 0 0);
+    --c-white: rgb(250 250 250);
+    --c-grey: rgb(157,157,157);
+
+    --ff-primary: 'Sysfont', sans-serif;
+    --border: 2px solid var(--c-black);
+
+}
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    font-family: 'Sysfont', sans-serif;
+    font-weight: 400;
+    font-size: 150%;
+}
+
+body {
+    background: var(--c-grey);
+}
+
+/* Navbar */
+
+nav {
+    background-color: var(--c-white);
+    border-bottom: var(--border);
+}
+
+.menu-links {
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.menu-link {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+.menu-link:hover {
+    background-color: var(--c-black);
+    color: var(--c-white);
+}
+
+.menu-link.logo {
+    position: relative;
+    width: 45px; /* can be omitted for a regular non-lazy image */
+    max-width: 100%;
+}
+
+.logo-default {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.logo-hover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.logo-hover:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+img {
+    image-rendering: pixelated;
+}
